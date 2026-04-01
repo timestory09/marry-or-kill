@@ -10,6 +10,11 @@ const finalDate = document.getElementById('final-date');
 
 // Fleeing logic for the 'Kill Me' button
 const moveKillBtn = () => {
+    // Disable fleeing on small screens or touch devices for better usability
+    if (window.innerWidth < 600 || window.matchMedia("(pointer: coarse)").matches) {
+        return;
+    }
+
     const maxX = window.innerWidth - killBtn.offsetWidth - 20;
     const maxY = window.innerHeight - killBtn.offsetHeight - 20;
     
@@ -22,6 +27,7 @@ const moveKillBtn = () => {
     killBtn.style.top = `${newY}px`;
     killBtn.style.margin = '0';
     killBtn.style.zIndex = '1000';
+    killBtn.style.transition = 'all 0.2s ease'; // Smooth flee
 };
 
 // Listen for mousemove to trigger fleeing early
