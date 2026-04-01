@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do You Want to Kill Me or Marry Me?</title>
+    <meta name="description" content="The ultimate interactive choice. Will you say yes, or will you try to click the unclickable?">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-glass"></div>
+    
+    <main id="app">
+        <div class="card" id="main-card">
+            <h1 id="question">Do you want to <span class="kill-text">Kill</span> me or <span class="marry-text">Marry</span> me?</h1>
+            
+            <div class="button-container">
+                <button id="marry-btn" class="btn marry">Marry Me 💍</button>
+                <button id="kill-btn" class="btn kill">Kill Me 🔪</button>
+            </div>
+        </div>
+
+        <div id="loading-screen" class="hidden">
+            <div class="loader"></div>
+            <p>Processing your request...</p>
+        </div>
+
+        <div id="success-screen" class="hidden">
+            <h2 class="success-title">Let's meet 1st May</h2>
+            <div class="emoji-container">
+                <span id="groom" class="emoji">🤵</span>
+                <span id="bride" class="emoji">👰</span>
+            </div>
+            <div id="final-date" class="hidden">📅 1st May</div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
